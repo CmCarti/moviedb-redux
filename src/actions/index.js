@@ -2,6 +2,7 @@ import axios from 'axios';
 
 
 export const FETCH_POPULAR = 'fetch_popular';
+export const FETCH_MOVIE = 'fetch_movie';
 export const SEARCH = 'search';
 
 const API_KEY = "902d2e4211ce689c9cd29ea18bc9533e";
@@ -17,11 +18,18 @@ export function fetchPopular() {
 
 export function searchDatabase(term) {
     // This request will search for the term provided
-    const request = axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query="${term}"`)
-        
-    console.log(request);
+    const request = axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query="${term}"`);
     return {
         type: SEARCH,
+        payload: request
+    }
+}
+
+export function fetchMovie(id) {
+    // This request will fetch the movie based on the id given
+    const request = axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=credits,videos,recommendations,release_dates`);
+    return {
+        type: FETCH_MOVIE,
         payload: request
     }
 }
