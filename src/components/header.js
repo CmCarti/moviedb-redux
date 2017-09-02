@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SearchBar from './search-bar';
-import { connect } from 'react-redux';
  
 
-class Header extends Component {
+export default function Header(props) {
     
-    render(){
         return (
             <header className="card">
                 <div className="container">
-                    <SearchBar history={this.props.history} />
+                    <SearchBar history={props.history} />
                 </div>
                
             </header>
         )
-    }
+    
 }
-
-export default Header;
