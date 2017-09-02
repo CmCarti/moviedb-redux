@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { searchDatabase } from '../actions';
 
+import  MovieCard  from './movie-card';
+
 class Results extends Component { 
     componentDidMount(){
         // Initial Load, grab the address bar and searchDatabase with it
@@ -18,7 +20,7 @@ class Results extends Component {
         if(this.props.results.data === undefined) return <div>Loading... </div>
 
         // Map over the results and return the card component for each film
-        return this.props.results.data.map( film => <p key={film.id}>{film.title}</p>);        
+        return this.props.results.data.map( film => <MovieCard key={film.id} film={film} />);        
     }
     render() {
         
