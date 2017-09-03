@@ -10,7 +10,7 @@ export default function Genres(props) {
     );
     return(
         <div className="right-align">
-            { genres }
+            <em>{ genres }</em>
         </div>
     )
 };
