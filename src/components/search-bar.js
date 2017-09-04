@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class SearchBar extends Component {
     constructor(props) {
@@ -18,7 +17,7 @@ class SearchBar extends Component {
     }
     render() {
         return (
-            <form className="row"onSubmit={ this.handleSubmit.bind(this) }>
+            <form className="row" onSubmit={ this.handleSubmit.bind(this) }>
                 <div className="input-field col l10 m9 s8">
                     <input type="text" id="search" className=""  value={this.state.term} onChange={ event => this.handleChange(event.target.value) }/>
                     <label htmlFor="search"><i className="material-icons search-icon">search</i> Enter a movie title</label>

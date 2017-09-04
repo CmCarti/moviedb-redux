@@ -4,6 +4,7 @@ import axios from 'axios';
 export const FETCH_POPULAR = 'fetch_popular';
 export const FETCH_MOVIE = 'fetch_movie';
 export const SEARCH = 'search';
+export const CLEAR_MOVIE = 'clear_movie'
 
 const API_KEY = "902d2e4211ce689c9cd29ea18bc9533e";
 
@@ -31,5 +32,12 @@ export function fetchMovie(id) {
     return {
         type: FETCH_MOVIE,
         payload: request
+    }
+}
+
+export function clearMovie(){
+    return {
+        type: CLEAR_MOVIE,
+        payload: null
     }
 }

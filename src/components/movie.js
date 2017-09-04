@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { fetchMovie } from '../actions';
 
+// Load the components for the movie page
+import MovieHeader from './movie-components/movie-header';
+import MovieBody from './movie-components/movie-body';
+
 class Movie extends Component {
     componentDidMount() {
         this.props.fetchMovie(this.props.match.params.id);
@@ -23,7 +27,8 @@ class Movie extends Component {
         console.log(film)        
         return(
             <div>
-                { film.title }
+                <MovieHeader film={film} />
+                <MovieBody film={film} />
             </div>
         )
     }

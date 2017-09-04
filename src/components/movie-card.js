@@ -7,7 +7,6 @@ export default class MovieCard extends Component {
 
 
     render() {
-        console.log(this.props.film);
         const film = this.props.film;
         return (
                 <div className="card horizontal">

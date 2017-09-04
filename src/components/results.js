@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { searchDatabase } from '../actions';
+import { searchDatabase, clearMovie } from '../actions';
 
 import  MovieCard  from './movie-card';
 
@@ -8,6 +8,7 @@ class Results extends Component {
     componentDidMount(){
         // Initial Load, grab the address bar and searchDatabase with it
         this.props.searchDatabase(this.props.match.params.term);
+       
     } 
     componentDidUpdate(prevProps) {
         // If this address doesn't match the last address, run the searchDatabase function
@@ -25,7 +26,8 @@ class Results extends Component {
     render() {
         
         return(
-            <div>
+            <div className="container">
+                <h4>Showing results for "{ this.props.match.params.term }":</h4>
                    {this.renderResults()} 
             </div>
         )
@@ -36,4 +38,4 @@ function mapStateToProps(state) {
      return { results: state.results };
 }
 
-export default connect(mapStateToProps, {searchDatabase})(Results);
+export default connect(mapStateToProps, {searchDatabase, clearMovie})(Results);

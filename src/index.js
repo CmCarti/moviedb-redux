@@ -22,13 +22,13 @@ ReactDOM.render(
         <BrowserRouter>
             <div>
                 <Route path="/" component={Header} />               
-                <div className="container">
+                
                     <Switch >
                         <Route path="/search/:term" component={ Results }/>
                         <Route path="/movies/:id" component={ Movie } />
                         <Route path="/" component={ MovieIndex } />
                     </Switch>
-                </div>
+                
                 <footer></footer>
             </div>
         </BrowserRouter>

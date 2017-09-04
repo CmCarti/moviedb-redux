@@ -1,4 +1,4 @@
-import { FETCH_MOVIE } from'../actions';
+import { FETCH_MOVIE, CLEAR_MOVIE } from'../actions';
 
 
 export default function(state = {}, action) {
@@ -7,6 +7,8 @@ export default function(state = {}, action) {
         case FETCH_MOVIE:     
             console.log(data);     
             return { data: data.data }
+        case CLEAR_MOVIE:
+            return { data: {}}
         default:
             return state;
     }

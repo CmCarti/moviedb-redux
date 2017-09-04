@@ -4,10 +4,39 @@ body {
   font-family: sans-serif;
   background: #efefef;
 }
-header.card {
+header{
   background: #313131;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   margin-top: 0;
-  padding: 10px;
+  padding: 15px;
+ 
+}
+.btn {
+  background:#00D474;
+}
+.btn:hover {
+  background: #55DFA0;
+}
+a, .card .card-action a {
+  color: #00D474!important;
+}
+a:hover {
+  color: #55DFA0!important;
+}
+ /* label focus color */
+ header .row .input-field input[type=text]:focus + label {
+  color: #00D474;
+}
+/* label underline focus color */
+header  .row .input-field input[type=text]:focus {
+  border-bottom: 1px solid #00D474;
+  
+}
+header .row {
+  margin-bottom: 0;
+}
+header {
+ 
 }
 .search-icon {
   font-size: 20px;
@@ -15,4 +44,35 @@ header.card {
 }
 input {
   color: #ffffff;
+}
+.movie-db {
+  color: #00D474;
+  font-weight: 800;
+  font-size: 20px;
+}
+.movie-db span {
+  display: inline-block;
+  transform: translateY(-10px) translateX(-6px);
+}
+.movie-db img {
+  max-width: 45px;
+}
+
+.release-date .material-icons {
+  font-size: 16px;
+  display: inline-block;
+  transform:translateY(2px);
+}
+
+.movie-header {
+  color: white;
+}
+.genre-card {
+  color: #313131;
+  font-size: 14px;
+  padding: 2px 5px;
+  margin-right: 5px;
+  display: inline-block;
+  margin-top: 0px;
+  transform:translateY(-2px);
 }
