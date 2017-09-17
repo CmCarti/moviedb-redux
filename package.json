@@ -12,6 +12,7 @@
     "redux": "^3.7.2",
     "redux-promise": "^0.5.3"
   },
+  "homepage": "https://github.com/CmCarti/moviedb-redux/",
   "devDependencies": {
     "react-scripts": "1.0.12"
   },
